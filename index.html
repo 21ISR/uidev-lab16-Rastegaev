@@ -33,7 +33,7 @@
                 Мы предоставляем передовые технологические решения для
                 бизнеса любого масштаба.
             </p>
-            
+
             <!-- Слайдер -->
             <div class="slider-container">
                 <div class="slider">
@@ -57,21 +57,21 @@
             </div>
 
             <button class="btn" id="show-popup">Свяжитесь с нами</button>
-            
+
         </section>
-        
+
         <section id="about">
             <h2>О нас</h2>
             <p>
                 КорпТехно – лидер в области корпоративных технологических
                 решений с 2005 года.
             </p>
-            
+
             <!-- Аккордеон -->
             <div class="accordion">
                 <div class="accordion-item">
-                    <div class="accordion-header">Наша миссия</div>
-                    <div class="accordion-content">
+                    <div class="accordion-header" id="accordion-header-3">Наша миссия</div>
+                    <div class="accordion-content" id="ach1c">
                         <div class="accordion-content-inner">
                             <p>
                                 Наша миссия – предоставлять передовые
@@ -82,8 +82,8 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <div class="accordion-header" id="accordion-header">Наша команда</div>
-                    <div class="accordion-content">
+                    <div class="accordion-header" id="accordion-header-2">Наша команда</div>
+                    <div class="accordion-content" id="ach2c">
                         <div class="accordion-content-inner">
                             <p>
                                 Наша команда состоит из опытных
@@ -94,8 +94,8 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <div class="accordion-header">Наши ценности</div>
-                    <div class="accordion-content">
+                    <div class="accordion-header" id="accordion-header-1">Наши ценности</div>
+                    <div class="accordion-content" id="ach3c">
                         <div class="accordion-content-inner">
                             <p>
                                 Мы ценим качество, инновации, честность и
@@ -113,21 +113,21 @@
                 Мы предлагаем широкий спектр услуг для решения различных
                 бизнес-задач.
             </p>
-            
+
             <!-- Вкладки -->
             <div class="tabs">
                 <div class="tab-header">
-                    <button class="tab-btn active" data-tab="tab1">
+                    <button class="tab-btn active" data-tab="tab1" id="tab11">
                         Разработка ПО
                     </button>
-                    <button class="tab-btn" data-tab="tab2">
+                    <button class="tab-btn" data-tab="tab2" id="tab21">
                         ИТ-консалтинг
                     </button>
-                    <button class="tab-btn" data-tab="tab3">
+                    <button class="tab-btn" data-tab="tab3" id="tab31">
                         Облачные решения
                     </button>
                 </div>
-                <div class="tab-content active" id="tab1">
+                <div class="tab-content active" id="tab12">
                     <h3>Разработка программного обеспечения</h3>
                     <p>
                         Мы разрабатываем индивидуальные программные решения,
@@ -139,7 +139,7 @@
                         технологиями и платформами.
                     </p>
                 </div>
-                <div class="tab-content" id="tab2">
+                <div class="tab-content" id="tab22">
                     <h3>ИТ-консалтинг</h3>
                     <p>
                         Мы помогаем бизнесу оптимизировать
@@ -151,7 +151,7 @@
                         информационных технологий и бизнес-процессов.
                     </p>
                 </div>
-                <div class="tab-content" id="tab3">
+                <div class="tab-content" id="tab32">
                     <h3>Облачные решения</h3>
                     <p>
                         Мы предлагаем облачные решения, которые помогают
@@ -165,11 +165,11 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="portfolio">
             <h2>Портфолио</h2>
             <p>Ознакомьтесь с нашими последними проектами.</p>
-            
+
             <!-- Тултипы -->
             <div style="
                         display: flex;
@@ -178,26 +178,26 @@
                     ">
                 <div class="tooltip">
                     <img src="/api/placeholder/200/150" alt="Проект 1" />
-                    <span class="tooltip-text">
+                    <span class="tooltip-text" id="tt1">
                         Система управления для логистической компании
                     </span>
                 </div>
                 <div class="tooltip">
                     <img src="/api/placeholder/200/150" alt="Проект 2" />
-                    <span class="tooltip-text">
+                    <span class="tooltip-text" id="tt2">
                         Мобильное приложение для банка
                     </span>
                 </div>
                 <div class="tooltip">
                     <img src="/api/placeholder/200/150" alt="Проект 3" />
-                    <span class="tooltip-text">
+                    <span class="tooltip-text" id="tt3">
                         CRM-система для страховой компании
                     </span>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -231,7 +231,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Попап -->
     <div class="popup-overlay" id="popup-overlay">
         <div class="popup">
