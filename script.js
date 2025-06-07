@@ -208,6 +208,48 @@ function closettt3(ttt3) {
 }
 tooltipContainer[2].addEventListener("mouseout", closettt3)
 
+const next = document.querySelector(".slider-arrow-right")
+const prev = document.querySelector(".slider-arrow-left")
+const slider = document.querySelector(".slider")
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll(".slider-dot")
+let count = slides.length
+let slideindex = 0
 
 
+function perslide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`
+}
 
+function dotsact(index) {
+    dots.forEach(dot => dot.classList.remove("active"))
+    // dots.classList.remove("active")
+    dots[index].classList.add("active")
+}
+
+function handleArrow(e) {
+    if (e.target.classList.contains("slider-arrow-left")) {
+        slideindex = (slideindex - 1 + count) % count
+    } else {
+        slideindex = (slideindex + 1) % count
+
+    }
+    dotsact(slideindex)
+    perslide(slideindex)
+}
+let timer = undefined
+
+function autoslider() {
+    if(timer){
+        clearInterval(timer)
+    }
+    timer = setInterval(() => {
+        slideindex = (slideindex + 1) % count
+        dotsact(slideindex)
+        perslide(slideindex)
+    }, 2000);
+}
+slider.addEventListener("mouseover", () => clearInterval(timer))
+slider.addEventListener("mouseout", () => autoslider())
+next.addEventListener("click", handleArrow)
+prev.addEventListener("click", handleArrow)
